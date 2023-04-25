@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>Javaの＝＝とequalsの違いは？</title>
+    <link href="/2023/04/25/Java%E3%81%AE%EF%BC%9D%EF%BC%9D%E3%81%A8equals%E3%81%AE%E9%81%95%E3%81%84%E3%81%AF%EF%BC%9F/"/>
+    <url>/2023/04/25/Java%E3%81%AE%EF%BC%9D%EF%BC%9D%E3%81%A8equals%E3%81%AE%E9%81%95%E3%81%84%E3%81%AF%EF%BC%9F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="＝＝とequalsの違いは？"><a href="#＝＝とequalsの違いは？" class="headerlink" title="＝＝とequalsの違いは？"></a>＝＝とequalsの違いは？</h1><ol><li><h3 id="と-equals-の違いは、次のようになります"><a href="#と-equals-の違いは、次のようになります" class="headerlink" title="== と equals の違いは、次のようになります"></a><code>==</code> と <code>equals</code> の違いは、次のようになります</h3><p> <code>==</code> 演算子は、比較しているオブジェクトの参照が同じかどうかをチェックします。つまり、比較しているオブジェクトが同じオブジェクトであるかどうかをチェックします。 一方、 <code>equals</code> メソッドは、オブジェクトの内容が同じであるかどうかをチェックします。</p></li><li><h3 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h3> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">str1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello World&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">str2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello World&quot;</span>;<br><br><span class="hljs-type">boolean</span> <span class="hljs-variable">isEqual</span> <span class="hljs-operator">=</span> str1.equals(str2);<span class="hljs-comment">//true</span><br><span class="hljs-type">boolean</span> <span class="hljs-variable">isSameRef</span> <span class="hljs-operator">=</span> (str1 == str2);<span class="hljs-comment">//true</span><br></code></pre></td></tr></table></figure><p> これら 2 つの文字列オブジェクトがメモリ内の定数プールに格納され、実際には同じメモリ アドレスを指します。 これは、Java の文字列は不変オブジェクトであるため、同じ内容の複数の文字列オブジェクトを作成すると、それらはすべて定数プールに格納され、同じメモリ アドレスを指して、メモリ スペースの浪費を回避します。</p><p> したがって、”&#x3D;” 演算子を使用してこれら 2 つの文字列オブジェクトを比較すると、同じメモリ アドレスを指しているため、true が返されます。 equals() メソッドを使用してこれら 2 つの文字列オブジェクトを比較すると、同じ文字列コンテンツが格納されているため、true が返されます。</p></li><li><h3 id="例2"><a href="#例2" class="headerlink" title="例2"></a>例2</h3> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">str1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&quot;Hello&quot;</span>);<br><span class="hljs-type">String</span> <span class="hljs-variable">str2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&quot;Hello&quot;</span>);<br><br><span class="hljs-type">boolean</span> <span class="hljs-variable">isEqualUsingEquals</span> <span class="hljs-operator">=</span> str1.equals(str2); <span class="hljs-comment">// true</span><br><span class="hljs-type">boolean</span> <span class="hljs-variable">isEqualUsingOperator</span> <span class="hljs-operator">=</span> (str1 == str2); <span class="hljs-comment">// false</span><br></code></pre></td></tr></table></figure><p> この例では、str1 と str2 には同じ文字列コンテンツが含まれていますが、異なるメモリ アドレスを指しています。 Java では、<strong>new キーワード</strong>を使用して作成されたオブジェクトは、<strong>毎回メモリ内に新しいインスタンス</strong>を作成するためです。</p><p> したがって、「&#x3D;」演算子を使用してこれら 2 つの文字列オブジェクトを比較すると、異なるメモリ アドレスを指しているため、false が返されます。 equals() メソッドを使用してこれら 2 つの文字列オブジェクトを比較すると、同じ文字列コンテンツが含まれているため、true が返されます。</p><h3 id="4-まとめ"><a href="#4-まとめ" class="headerlink" title="4.まとめ"></a>4.まとめ</h3><p> これらの例は、「&#x3D;」演算子が 2 つのオブジェクトの参照が同じかどうかを比較し、equals() メソッドが 2 つのオブジェクトに含まれる内容が等しいかどうかを比較することを示しています。 String 型のオブジェクトの場合、通常、「&#x3D;」演算子を使用するのではなく、equals() メソッドを使用して、含まれている文字列が等しいかどうかを比較します。</p></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>java 面接質問</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Laravelが環境構築、WindowsとUnix/Linuxで使われる改行の違いとは</title>
+    <link href="/2023/04/21/Laravel%E3%81%8C%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%80%81Windows%E3%81%A8Unix-Linux%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%82%8B%E6%94%B9%E8%A1%8C%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/"/>
+    <url>/2023/04/21/Laravel%E3%81%8C%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%80%81Windows%E3%81%A8Unix-Linux%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%82%8B%E6%94%B9%E8%A1%8C%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>php laravel</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>卓球を上手にプレーする 中国の古典的で最強の卓球基礎指導</title>
     <link href="/2023/01/17/%E5%8D%93%E7%90%83%E3%82%92%E4%B8%8A%E6%89%8B%E3%81%AB%E3%83%97%E3%83%AC%E3%83%BC%E3%81%99%E3%82%8B-%E4%B8%AD%E5%9B%BD%E3%81%AE%E5%8F%A4%E5%85%B8%E7%9A%84%E3%81%A7%E6%9C%80%E5%BC%B7%E3%81%AE%E5%8D%93%E7%90%83%E5%9F%BA%E7%A4%8E%E6%8C%87%E5%B0%8E/"/>
     <url>/2023/01/17/%E5%8D%93%E7%90%83%E3%82%92%E4%B8%8A%E6%89%8B%E3%81%AB%E3%83%97%E3%83%AC%E3%83%BC%E3%81%99%E3%82%8B-%E4%B8%AD%E5%9B%BD%E3%81%AE%E5%8F%A4%E5%85%B8%E7%9A%84%E3%81%A7%E6%9C%80%E5%BC%B7%E3%81%AE%E5%8D%93%E7%90%83%E5%9F%BA%E7%A4%8E%E6%8C%87%E5%B0%8E/</url>
