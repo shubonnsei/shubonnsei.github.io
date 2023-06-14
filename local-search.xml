@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>LeetCode数组基础题</title>
+    <link href="/2023/06/14/LeetCode%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80%E9%A2%98/"/>
+    <url>/2023/06/14/LeetCode%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h1 id="数组基础题"><a href="#数组基础题" class="headerlink" title="数组基础题"></a>数组基础题</h1><h2 id="leetcode-26"><a href="#leetcode-26" class="headerlink" title="leetcode 26"></a>leetcode 26</h2><p>问题简述：</p><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p><p>这里大致有两种解法，第一种是双指针：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">removeDuplicate</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span>&#123;<br>    <span class="hljs-keyword">if</span>(nums.length==<span class="hljs-number">0</span>)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-type">int</span> j= <span class="hljs-number">0</span>;<span class="hljs-comment">//慢指针</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span><span class="hljs-number">1</span>;i&lt;nums.length;i++)&#123;<span class="hljs-comment">//快指针</span><br>        <span class="hljs-keyword">if</span>(nums[i]!=nums[j])&#123;<br>            j++;<br>            nums[j]=nums[i];<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> j+<span class="hljs-number">1</span>;<br>    <br>&#125;<br></code></pre></td></tr></table></figure><p>这道题最重要的是先明确，并不需要把重复数据全部删除，只需要替换最前面的几个即可。比如说{0,0,1,1,2,2}，最终只需把它变为{0,1,2,1,2,2}即可而不是{0,1,2}。明确这一点，这题就好做多了。</p><p>这里初学者可能容易搞不清楚的是数组重复数据是如何被覆盖的，举个具体的例子，例如测试用例输入{0，0，0，1，1，2，3}。具体的操作过程将是这样的：在快指针i跑到1为止，j始终在原地，唯有等到i自增至3，这个时候才会执行以下判断语句，也就是j先自增变为1，之后将nums[j+1]也就是nums[1]变成num[i]也就是nums[3]的数。后面依此类推。</p><p>第二种写法是，利用<strong>LinkedHashSet</strong>内容不重复以及保证顺序的特性。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">removeDuplicate1</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span>&#123;<br>        LinkedHashSet&lt;Integer&gt; set = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedHashSet</span>();<span class="hljs-comment">//</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> n : nums)&#123;<br>            set.add(n);<span class="hljs-comment">//增强for循环将数组中数字塞入set中</span><br>        &#125;<br><br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span><span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j : set)&#123;<br>            nums[i++]=j;<br>        &#125;<span class="hljs-comment">//结合set特性，覆写原先的数组</span><br>        <span class="hljs-keyword">return</span> set.size();<span class="hljs-comment">//返回题目要求需要的数</span><br>    &#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Javaの＝＝とequalsの違いは？</title>
     <link href="/2023/04/25/Java%E3%81%AE%EF%BC%9D%EF%BC%9D%E3%81%A8equals%E3%81%AE%E9%81%95%E3%81%84%E3%81%AF%EF%BC%9F/"/>
     <url>/2023/04/25/Java%E3%81%AE%EF%BC%9D%EF%BC%9D%E3%81%A8equals%E3%81%AE%E9%81%95%E3%81%84%E3%81%AF%EF%BC%9F/</url>

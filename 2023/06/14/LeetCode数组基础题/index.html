@@ -16,22 +16,22 @@
   <meta name="author" content="シュボンセイ">
   <meta name="keywords" content="">
   
-    <meta name="description" content="＝＝とequalsの違いは？ &#x3D;&#x3D; と equals の違いは、次のようになります &#x3D;&#x3D; 演算子は、比較しているオブジェクトの参照が同じかどうかをチェックします。つまり、比較しているオブジェクトが同じオブジェクトであるかどうかをチェックします。 一方、 equals メソッドは、オブジェクトの内容が同じであるかどうかをチェックします。  例1 12345String str1 &#x3D; &quot;He">
+    <meta name="description" content="数组基础题leetcode 26问题简述： 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。 这里大致有两种解法，第一种是双指针： 1234567891011121314public int removeDuplicate(int[] nums)&amp;#123;    if(nums.length&#x3D;&#x3D;0)&amp;#123;        return 0;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javaの＝＝とequalsの違いは？">
-<meta property="og:url" content="http://example.com/2023/04/25/Java%E3%81%AE%EF%BC%9D%EF%BC%9D%E3%81%A8equals%E3%81%AE%E9%81%95%E3%81%84%E3%81%AF%EF%BC%9F/index.html">
+<meta property="og:title" content="LeetCode数组基础题">
+<meta property="og:url" content="http://example.com/2023/06/14/LeetCode%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80%E9%A2%98/index.html">
 <meta property="og:site_name" content="シュ世界">
-<meta property="og:description" content="＝＝とequalsの違いは？ &#x3D;&#x3D; と equals の違いは、次のようになります &#x3D;&#x3D; 演算子は、比較しているオブジェクトの参照が同じかどうかをチェックします。つまり、比較しているオブジェクトが同じオブジェクトであるかどうかをチェックします。 一方、 equals メソッドは、オブジェクトの内容が同じであるかどうかをチェックします。  例1 12345String str1 &#x3D; &quot;He">
+<meta property="og:description" content="数组基础题leetcode 26问题简述： 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。 这里大致有两种解法，第一种是双指针： 1234567891011121314public int removeDuplicate(int[] nums)&amp;#123;    if(nums.length&#x3D;&#x3D;0)&amp;#123;        return 0;">
 <meta property="og:locale" content="ja_JP">
-<meta property="article:published_time" content="2023-04-25T06:31:01.000Z">
-<meta property="article:modified_time" content="2023-04-25T06:41:55.682Z">
+<meta property="article:published_time" content="2023-06-14T04:32:25.000Z">
+<meta property="article:modified_time" content="2023-06-14T04:42:31.626Z">
 <meta property="article:author" content="シュボンセイ">
-<meta property="article:tag" content="java 面接質問">
+<meta property="article:tag" content="leetcode java">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Javaの＝＝とequalsの違いは？ - シュ世界</title>
+  <title>LeetCode数组基础题 - シュ世界</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Javaの＝＝とequalsの違いは？"></span>
+            <span id="subtitle" data-typed-text="LeetCode数组基础题"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-25 15:31" pubdate>
-          2023年4月25日 午後
+        <time datetime="2023-06-14 13:32" pubdate>
+          2023年6月14日 午後
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 単語
+          898 単語
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          11 分
+          8 分
         
       </span>
     
@@ -269,26 +269,23 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Javaの＝＝とequalsの違いは？</h1>
+            <h1 style="display: none">LeetCode数组基础题</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="＝＝とequalsの違いは？"><a href="#＝＝とequalsの違いは？" class="headerlink" title="＝＝とequalsの違いは？"></a>＝＝とequalsの違いは？</h1><ol>
-<li><h3 id="と-equals-の違いは、次のようになります"><a href="#と-equals-の違いは、次のようになります" class="headerlink" title="== と equals の違いは、次のようになります"></a><code>==</code> と <code>equals</code> の違いは、次のようになります</h3><p> <code>==</code> 演算子は、比較しているオブジェクトの参照が同じかどうかをチェックします。つまり、比較しているオブジェクトが同じオブジェクトであるかどうかをチェックします。 一方、 <code>equals</code> メソッドは、オブジェクトの内容が同じであるかどうかをチェックします。</p>
-</li>
-<li><h3 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h3> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">str1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello World&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">str2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello World&quot;</span>;<br><br><span class="hljs-type">boolean</span> <span class="hljs-variable">isEqual</span> <span class="hljs-operator">=</span> str1.equals(str2);<span class="hljs-comment">//true</span><br><span class="hljs-type">boolean</span> <span class="hljs-variable">isSameRef</span> <span class="hljs-operator">=</span> (str1 == str2);<span class="hljs-comment">//true</span><br></code></pre></td></tr></table></figure>
+                <h1 id="数组基础题"><a href="#数组基础题" class="headerlink" title="数组基础题"></a>数组基础题</h1><h2 id="leetcode-26"><a href="#leetcode-26" class="headerlink" title="leetcode 26"></a>leetcode 26</h2><p>问题简述：</p>
+<p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
+<p>这里大致有两种解法，第一种是双指针：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">removeDuplicate</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span>&#123;<br>    <span class="hljs-keyword">if</span>(nums.length==<span class="hljs-number">0</span>)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-type">int</span> j= <span class="hljs-number">0</span>;<span class="hljs-comment">//慢指针</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span><span class="hljs-number">1</span>;i&lt;nums.length;i++)&#123;<span class="hljs-comment">//快指针</span><br>        <span class="hljs-keyword">if</span>(nums[i]!=nums[j])&#123;<br>            j++;<br>            nums[j]=nums[i];<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> j+<span class="hljs-number">1</span>;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p> これら 2 つの文字列オブジェクトがメモリ内の定数プールに格納され、実際には同じメモリ アドレスを指します。 これは、Java の文字列は不変オブジェクトであるため、同じ内容の複数の文字列オブジェクトを作成すると、それらはすべて定数プールに格納され、同じメモリ アドレスを指して、メモリ スペースの浪費を回避します。</p>
-<p> したがって、”&#x3D;” 演算子を使用してこれら 2 つの文字列オブジェクトを比較すると、同じメモリ アドレスを指しているため、true が返されます。 equals() メソッドを使用してこれら 2 つの文字列オブジェクトを比較すると、同じ文字列コンテンツが格納されているため、true が返されます。</p>
-</li>
-<li><h3 id="例2"><a href="#例2" class="headerlink" title="例2"></a>例2</h3> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">str1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&quot;Hello&quot;</span>);<br><span class="hljs-type">String</span> <span class="hljs-variable">str2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&quot;Hello&quot;</span>);<br><br><span class="hljs-type">boolean</span> <span class="hljs-variable">isEqualUsingEquals</span> <span class="hljs-operator">=</span> str1.equals(str2); <span class="hljs-comment">// true</span><br><span class="hljs-type">boolean</span> <span class="hljs-variable">isEqualUsingOperator</span> <span class="hljs-operator">=</span> (str1 == str2); <span class="hljs-comment">// false</span><br></code></pre></td></tr></table></figure>
+<p>这道题最重要的是先明确，并不需要把重复数据全部删除，只需要替换最前面的几个即可。比如说{0,0,1,1,2,2}，最终只需把它变为{0,1,2,1,2,2}即可而不是{0,1,2}。明确这一点，这题就好做多了。</p>
+<p>这里初学者可能容易搞不清楚的是数组重复数据是如何被覆盖的，举个具体的例子，例如测试用例输入{0，0，0，1，1，2，3}。具体的操作过程将是这样的：在快指针i跑到1为止，j始终在原地，唯有等到i自增至3，这个时候才会执行以下判断语句，也就是j先自增变为1，之后将nums[j+1]也就是nums[1]变成num[i]也就是nums[3]的数。后面依此类推。</p>
+<p>第二种写法是，利用<strong>LinkedHashSet</strong>内容不重复以及保证顺序的特性。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">removeDuplicate1</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span>&#123;<br>        LinkedHashSet&lt;Integer&gt; set = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedHashSet</span>();<span class="hljs-comment">//</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> n : nums)&#123;<br>            set.add(n);<span class="hljs-comment">//增强for循环将数组中数字塞入set中</span><br>        &#125;<br><br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span><span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j : set)&#123;<br>            nums[i++]=j;<br>        &#125;<span class="hljs-comment">//结合set特性，覆写原先的数组</span><br>        <span class="hljs-keyword">return</span> set.size();<span class="hljs-comment">//返回题目要求需要的数</span><br>    &#125;<br></code></pre></td></tr></table></figure>
 
-<p> この例では、str1 と str2 には同じ文字列コンテンツが含まれていますが、異なるメモリ アドレスを指しています。 Java では、<strong>new キーワード</strong>を使用して作成されたオブジェクトは、<strong>毎回メモリ内に新しいインスタンス</strong>を作成するためです。</p>
-<p> したがって、「&#x3D;」演算子を使用してこれら 2 つの文字列オブジェクトを比較すると、異なるメモリ アドレスを指しているため、false が返されます。 equals() メソッドを使用してこれら 2 つの文字列オブジェクトを比較すると、同じ文字列コンテンツが含まれているため、true が返されます。</p>
-<h3 id="4-まとめ"><a href="#4-まとめ" class="headerlink" title="4.まとめ"></a>4.まとめ</h3><p> これらの例は、「&#x3D;」演算子が 2 つのオブジェクトの参照が同じかどうかを比較し、equals() メソッドが 2 つのオブジェクトに含まれる内容が等しいかどうかを比較することを示しています。 String 型のオブジェクトの場合、通常、「&#x3D;」演算子を使用するのではなく、equals() メソッドを使用して、含まれている文字列が等しいかどうかを比較します。</p>
-</li>
-</ol>
+
+
 
                 
               </div>
@@ -301,7 +298,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/java-%E9%9D%A2%E6%8E%A5%E8%B3%AA%E5%95%8F/">#java 面接質問</a>
+        <a href="/tags/leetcode-java/">#leetcode java</a>
       
     </div>
   
@@ -313,8 +310,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Javaの＝＝とequalsの違いは？</div>
-      <div>http://example.com/2023/04/25/Javaの＝＝とequalsの違いは？/</div>
+      <div>LeetCode数组基础题</div>
+      <div>http://example.com/2023/06/14/LeetCode数组基础题/</div>
     </div>
     <div class="license-meta">
       
@@ -326,7 +323,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>作成日</div>
-          <div>2023年4月25日</div>
+          <div>2023年6月14日</div>
         </div>
       
       
@@ -358,18 +355,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/06/14/LeetCode%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80%E9%A2%98/" title="LeetCode数组基础题">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">LeetCode数组基础题</span>
-                        <span class="visible-mobile">前の記事</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/21/Laravel%E3%81%8C%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%80%81Windows%E3%81%A8Unix-Linux%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%82%8B%E6%94%B9%E8%A1%8C%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" title="Laravelが環境構築、WindowsとUnix/Linuxで使われる改行の違いとは">
-                        <span class="hidden-mobile">Laravelが環境構築、WindowsとUnix/Linuxで使われる改行の違いとは</span>
+                      <a href="/2023/04/25/Java%E3%81%AE%EF%BC%9D%EF%BC%9D%E3%81%A8equals%E3%81%AE%E9%81%95%E3%81%84%E3%81%AF%EF%BC%9F/" title="Javaの＝＝とequalsの違いは？">
+                        <span class="hidden-mobile">Javaの＝＝とequalsの違いは？</span>
                         <span class="visible-mobile">次の記事</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
