@@ -16,19 +16,21 @@
   <meta name="author" content="シュボンセイ">
   <meta name="keywords" content="">
   
-    <meta name="description" content="学習履歴を記録する">
+    <meta name="description" content="数字を当てるゲーム         html {       font-family: sans-serif;     }      body {       width: 50%;       max-width: 800px;       min-width: 480px;       margin: 0 auto;     }      .form input[type&#x3D;">
 <meta property="og:type" content="website">
-<meta property="og:title" content="シュ世界">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:title" content="page.title">
+<meta property="og:url" content="http://example.com/games/number-guessing-game-japanV.html">
 <meta property="og:site_name" content="シュ世界">
-<meta property="og:description" content="学習履歴を記録する">
+<meta property="og:description" content="数字を当てるゲーム         html {       font-family: sans-serif;     }      body {       width: 50%;       max-width: 800px;       min-width: 480px;       margin: 0 auto;     }      .form input[type&#x3D;">
 <meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2023-06-29T00:41:39.504Z">
+<meta property="article:modified_time" content="2023-06-29T00:37:30.006Z">
 <meta property="article:author" content="シュボンセイ">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>シュ世界</title>
+  <title>page.title - シュ世界</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -82,7 +84,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 100vh;">
+<div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -188,17 +190,13 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="こんにちは！こちらは普通の場所で～～～～～～す"></span>
+            <span id="subtitle" data-typed-text="page.title"></span>
           
         </div>
 
         
       </div>
 
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
       
     </div>
   </div>
@@ -212,201 +210,123 @@
     
       <div class="container nopadding-x-md">
         <div id="board"
-          style="margin-top: 0">
+          >
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
+<article class="page-content">
+  <!DOCTYPE html>
+<html lang="ja">
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2023/06/14/LeetCode%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80%E9%A2%98/" target="_self">
-          LeetCode数组基础题
-        </a>
-      </h1>
+<head>
+  <meta charset="utf-8">
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/06/14/LeetCode%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80%E9%A2%98/" target="_self">
-        <div>
-          数组基础题leetcode 26问题简述： 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。 这里大致有两种解法，第一种是双指针： 1234567891011121314public int removeDuplicate(int[] nums)&#123;    if(nums.length==0)&#123;        return 0;
-        </div>
-      </a>
+  <title>数字を当てるゲーム</title>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-06-14 13:32" pubdate>
-              2023-06-14
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/leetcode-java/">#leetcode java</a>
-            
-          </div>
-        
-      </div>
-    </article>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      width: 50%;
+      max-width: 800px;
+      min-width: 480px;
+      margin: 0 auto;
+    }
+
+    .form input[type="number"] {
+      width: 200px;
+    }
+
+    .lastResult {
+      color: white;
+      padding: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>推測できますか？</h1>
+
+  <p>1 から 100 までの乱数を選択しました。10 ターン以内にそれを推測できるかどうかを確認してください。 場合はお知らせします
+    あなたの推測は高すぎるか低すぎます。</p>
+
+  <div class="form">
+    <label for="guessField">推測の数字を入力してください: </label>
+    <input type="number" min="1" max="100" required id="guessField" class="guessField">
+    <input type="submit" value="推測を提出する" class="guessSubmit">
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2023/04/25/Java%E3%81%AE%EF%BC%9D%EF%BC%9D%E3%81%A8equals%E3%81%AE%E9%81%95%E3%81%84%E3%81%AF%EF%BC%9F/" target="_self">
-          Javaの＝＝とequalsの違いは？
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/04/25/Java%E3%81%AE%EF%BC%9D%EF%BC%9D%E3%81%A8equals%E3%81%AE%E9%81%95%E3%81%84%E3%81%AF%EF%BC%9F/" target="_self">
-        <div>
-          ＝＝とequalsの違いは？ == と equals の違いは、次のようになります == 演算子は、比較しているオブジェクトの参照が同じかどうかをチェックします。つまり、比較しているオブジェクトが同じオブジェクトであるかどうかをチェックします。 一方、 equals メソッドは、オブジェクトの内容が同じであるかどうかをチェックします。  例1 12345String str1 = &quot;He
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-04-25 15:31" pubdate>
-              2023-04-25
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/java-%E9%9D%A2%E6%8E%A5%E8%B3%AA%E5%95%8F/">#java 面接質問</a>
-            
-          </div>
-        
-      </div>
-    </article>
+  <div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2023/04/21/Laravel%E3%81%8C%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%80%81Windows%E3%81%A8Unix-Linux%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%82%8B%E6%94%B9%E8%A1%8C%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" target="_self">
-          Laravelが環境構築、WindowsとUnix/Linuxで使われる改行の違いとは
-        </a>
-      </h1>
+  <script>
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/04/21/Laravel%E3%81%8C%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%80%81Windows%E3%81%A8Unix-Linux%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%82%8B%E6%94%B9%E8%A1%8C%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" target="_self">
-        <div>
-          
-        </div>
-      </a>
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-04-21 16:58" pubdate>
-              2023-04-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/php-laravel/">#php laravel</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
+    const guesses = document.querySelector('.guesses');
+    const lastResult = document.querySelector('.lastResult');
+    const lowOrHi = document.querySelector('.lowOrHi');
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2023/01/17/%E5%8D%93%E7%90%83%E3%82%92%E4%B8%8A%E6%89%8B%E3%81%AB%E3%83%97%E3%83%AC%E3%83%BC%E3%81%99%E3%82%8B-%E4%B8%AD%E5%9B%BD%E3%81%AE%E5%8F%A4%E5%85%B8%E7%9A%84%E3%81%A7%E6%9C%80%E5%BC%B7%E3%81%AE%E5%8D%93%E7%90%83%E5%9F%BA%E7%A4%8E%E6%8C%87%E5%B0%8E/" target="_self">
-          卓球を上手にプレーする 中国の古典的で最強の卓球基礎指導
-        </a>
-      </h1>
+    const guessSubmit = document.querySelector('.guessSubmit');
+    const guessField = document.querySelector('.guessField');
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/17/%E5%8D%93%E7%90%83%E3%82%92%E4%B8%8A%E6%89%8B%E3%81%AB%E3%83%97%E3%83%AC%E3%83%BC%E3%81%99%E3%82%8B-%E4%B8%AD%E5%9B%BD%E3%81%AE%E5%8F%A4%E5%85%B8%E7%9A%84%E3%81%A7%E6%9C%80%E5%BC%B7%E3%81%AE%E5%8D%93%E7%90%83%E5%9F%BA%E7%A4%8E%E6%8C%87%E5%B0%8E/" target="_self">
-        <div>
-          第一集~第三集0、基本立ち方 1、投げ方  ロースロー手のひらが上向きで、手のひらがまっすぐであることに注意してください。  上段投げ ボールを投げる時、手のひらが台より少し沈み込みますが、下段よりも少し力を入れて加速して投げます。     2、基本的なフットワーク①サイドジャンプ左にジャンプするときは右足で地面を蹴り、右にジャンプするときは左足で地面を蹴り、歩幅を大きくします。  ②ステップジャ
-        </div>
-      </a>
+    let guessCount = 1;
+    let resetButton;
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-01-17 14:53" pubdate>
-              2023-01-17
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+    function checkGuess() {
+      alert('スタート！！'); 
+      //alert('placehoder');//placehoder プレースホルダー
+    }
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2023/01/17/hello-world/" target="_self">
-          Hello World
-        </a>
-      </h1>
+    checkGuess();
+    function checkGuess1() {
+      const userGuess = Number(guessField.value);
+      if (guessCount === 1) {
+        guesses.textContent = '以前の推測: ';
+      }
+      guesses.textContent += `${userGuess} `;
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/01/17/hello-world/" target="_self">
-        <div>
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
-        </div>
-      </a>
+      if (userGuess === randomNumber) {
+        lastResult.textContent = 'おめでとう！ 正解です！';
+        lastResult.style.backgroundColor = 'green';
+        lowOrHi.textContent = '';
+        setGameOver();
+      } else if (guessCount === 10) {
+        lastResult.textContent = '!!!ゲームオーバー!!!';
+        lowOrHi.textContent = '';
+        setGameOver();
+      } else {
+        lastResult.textContent = '違う!';
+        lastResult.style.backgroundColor = 'red';
+        if (userGuess < randomNumber) {
+          lowOrHi.textContent = '低い!';
+        } else if (userGuess > randomNumber) {
+          lowOrHi.textContent = '高い!';
+        }
+      }
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-01-17 14:06" pubdate>
-              2023-01-17
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+      guessCount++;
+      guessField.value = '';
+      guessField.focus();
+    }
 
+    guessSubmit.addEventListener('click',checkGuess1);
+  </script>
+</body>
 
+</html>
+
+  
+
+</article>
 
 
 
